@@ -1,10 +1,7 @@
-import Vue from 'vue';
+import { createApp } from 'vue';  // Make sure to import from 'vue'
 import App from './App.vue';
-import router from './router';
+import router from './router';  // Import your router
 
-Vue.config.productionTip = false;
-
-new Vue({
-  render: h => h(App),
-  router
-}).$mount('#app');
+createApp(App)
+  .use(router)  // Add router to the app
+  .mount('#app');  // Mount to the DOM
